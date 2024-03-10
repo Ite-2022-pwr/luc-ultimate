@@ -1,6 +1,10 @@
   \section{Kody}
 
-\subsection{Dwójkowo-dziesiętne (BCD)}
+  - \textbf{dziesiętne-binarne}: pozwalają zapisać liczbę dziesiętną w systemie binarnym \label{sec:intro} \\
+  - \textbf{refleksyjne}: wartości poszczególnych bitów zależą od innych wartości (jedno wynika z drugiego) \\
+  - \textbf{wagowe}: Wartość danego bitu zależy od jego pozycji. TODO: dokończ \\
+  - \textbf{detekcyjne}: Pozwalają wykryć błąd kodowania danych
+  - \textbf{refleksyjne}: Pozwalają wykryć i skorygować błędy danych
 
 \subsubsection{Kod 8-4-2-1 (BCD)}
 
@@ -15,9 +19,14 @@ samymi metodami, co dla liczb dwójkowych. Np. liczba 127 w kodzie 8421 będzie 
     \label{fig:my_label}
 \end{figure}
 
-\subsubsection{Kod +3}
+Źródła dodatkowe: \\
+\url{https://www.youtube.com/watch?v=8sEUY-PBfaM}
+\url{https://miniwebtool.com/bcd-to-decimal-converter/}
 
-Kod „+3” (D = B + 3) – kod niewagowy, samouzupełniający (do 9 przez negację wszystkich bitów)
+\subsubsection{Kod +N}
+
+Kody z rodziny "+N" (D = B + N) czyli np. "+3" to kody niewagowe, samouzupełniające się.
+Aby zapisać liczbę dziesiętną w tej postaci, trzeba przekonwertować ją na naturalny kod binarny i dodać N zapisane binarnie
 
 \begin{figure}[h!]
     \centering
@@ -42,14 +51,12 @@ występować jednocześnie – zmiana 0111 na 1111, zamiast na 1000 (w sterowani
 
 \newpage
 
-\subsection{Refleksyjne}
 
 \subsubsection{Kod gray'a}
 
-Możliwość powstawania błędów niejednoczesnej zmiany na pozycjach kodu jest
+Kod refleksyjny. Możliwość powstawania błędów niejednoczesnej zmiany na pozycjach kodu jest
 wyeliminowana w kodach, w których nie więcej niż jeden bit zmienia swoją wartość przy
 przejściu między kolejnymi zakodowanymi wartościami.
-Przykładem kodu refleksyjnego jest kod Graya.
 
 \begin{figure}[h!]
     \centering
